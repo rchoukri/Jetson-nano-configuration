@@ -13,7 +13,7 @@ You’ll need to power the developer kit with a good quality power supply that c
 ### Keyboard
 ### Screen & HDMI Cable
 
-## Write Image to the microSD Cardrite Image to the microSD CardWrite Image to MicroSDroSD Card
+## Write Image to the microSD Card
 
 To prepare your microSD card, you’ll need a computer wan with an Internet connection and the ability to read and write SD cards, either via a built-in SD card slot or adapter.
 1. Download the Jetson Nano Developer Kit SD Card Image, and note where it was saved on the computer.
