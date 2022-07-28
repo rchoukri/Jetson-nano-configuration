@@ -29,7 +29,7 @@ To prepare your microSD card, you’ll need a computer wan with an Internet conn
 4. Connect the USB keyboard and mouse.
 5. Connect your Micro-USB power supply (or see the Jetson Nano Developer Kit User Guide for details about using DC a power supply with a barrel jack connector). The developer kit will power on and boot automatically.
 ### First boot
-In this,tuto we propose two versions of Jetson nano SDcard image.
+In this, Tutorial we propose two versions of Jetson nano SDcard image.
 #### Version 1
 - Jetson Nano 2GB Developer Kit SD Card Image  is the version proposed by the Nvidia website, with Ubuntu 18.04 and python 6.9.
 If you use this version, you need to configure the Jetson.
@@ -55,7 +55,7 @@ The RPi HQ V1.0 camera it's not supported on the Jetson nano, The CSI interface 
 
 ### First method: Manual Installation
 
-for it to be functional it is necessary to install some drivers, the detailed instruction are in this tutorial: 
+for it to be functional it is necessary to install some drivers, the detailed instructions are in this tutorial: 
 https://www.okdo.com/getting-started/get-started-with-jetson-nano-2gb-and-csi-camera/
 
 Download the.deb package:
@@ -77,7 +77,9 @@ so if you use the line above, you will get some errors.
 our kernel: Linux 4.9.253
 the package kernel: 4.9.140
 to avoid that we will use the command line:
+
 sudo dpkg --foce-all -i xxx.deb
+
 After the installation of the package, we must reboot the device
 
 ## Automatic Installation:
@@ -87,7 +89,7 @@ Our version is: L4R32.7.1, the automatic installation works perfectly on our dev
 	
 Detailed instructions on this tutorial: 
 
-https://www.arducam.com/docs/camera-for-jetson-nano/native-jetson-cameras-imx219-imx477/imx477/#5-automatic-driver-installation-the the -only--for-l4t3243-and-later-versions
+https://www.arducam.com/docs/camera-for-jetson-nano/native-jetson-cameras-imx219-imx477/imx477/#5-automatic-driver-installation-the 
 
 ### Driver Setup
 After writing the image to the SD Card, we must modify the camera interface (CSI) through jetson-io with the command:
@@ -108,6 +110,8 @@ chmod +x install_full.sh
 
 ## Configuration of OpenCVpencv version to use Jompy_lib_aruco_poseMarzo_ubuntu/windows.py
 
+https://automaticaddison.com/how-to-install-opencv-4-5-on-nvidia-jetson-nano/
+
 The Jetson nano uses a pre-installed version of OpenCV (4.1), this version is built with the pre-installed version of python(3.6), this version of Opencv is not compatible with our library.
 
 Also, we can't create a virtual environment and install the version we want, because, on the jetson nano (Linux in general), the camera requires an object called Gstreamer to be launched, this object can not be installed with the pip or pip3 tool in a virtual environment, so we can only use the pre-installed version of python/Opencv on Linux if we want to use a camera.
@@ -122,12 +126,12 @@ This installation takes between 4h and 5h, the different steps are in the link a
 I note that the version installed in this tutorial is not compatible, so we have to change some lines of code to install the versions we want.
 (Opencv and Opencv-contrib V4.5.4 and Gstreamer V1.0 ).
 
-For that, you will find above, a Bash script “build_opencv.sh that allows the full installation and configuration of camera and OpenCV. 
+For that, you will find above, a Bash script “build_opencv_camera_driver.sh that allows the full installation and configuration of camera and OpenCV. 
 
-To execute the script, you need to use these this two commands:
-cd ~/Downloads
-chmod +x build_opencv.sh 
-bash build_opencv.sh
+To execute the script, you need to use these this two commandlines:
+cd ~/Download
+chmod +x build_opencv_camera_driver.sh
+bash build_opencv_camera_driver.sh
 
 ## Using Mavlink protocol to connect the Jetson to the Pixhawk. (MAVSDK)
 
@@ -140,7 +144,7 @@ https://docs.px4.io/v1.9.0/en/peripherals/serial_configuration.html  (2)
 https://mavsdk.mavlink.io/main/en/python/quickstart.html (3)
 
 The installation of mavsdk is too simple, but it couldn’t be installed with the pre-installed versions of python on the Jetson nano (python3.6), because it requires python3.7 or more.
-it could be installed with python-pip with the following command line:
+it could be installed with python3-pip with the following command line:
 
 python3 -m pip install asyncio aioconsole mavsdk 
 
