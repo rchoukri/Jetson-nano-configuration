@@ -20,6 +20,9 @@ To prepare your microSD card, you’ll need a computer wan with an Internet conn
 2. Format your microSD card using SD Memory Card Formatter from the SD Association.
 3. Use Etcher to write the Jetson Nano Developer Kit SD Card Image to your microSD card
 
+Link to Download Etcher Balena : https://www.balena.io/etcher/
+Link to SD card frmatter: https://www.sdcard.org/downloads/formatter/
+
 ## Write Image
 
 ### Setup 
