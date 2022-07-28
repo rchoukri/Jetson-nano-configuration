@@ -1,6 +1,10 @@
 # Jetson-nano-configuration
 ## Prepare for setup
+The detailed guide  based on the Jetson Nano Developer Kit is on this link :
 
+https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-2gb-devkit
+ 
+ 
 ### microSD Card
 The Jetson Nano Developer Kit uses a microSD card as a boot device and for main storage. the minimum recommended is a 32 GB UHS-1 card.
 ### Micro-USB Power Supply
