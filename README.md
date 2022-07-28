@@ -45,10 +45,11 @@ JetsonNanoUb20 is the version proposed by Qengineering team with Ubuntu 20.04 an
 this version is already configured, after writing the image in the SDcard, the jetson will boot automaticaly.
 The password for this version is : "jetson"
 All instructions are in this link: https://github.com/Qengineering/Jetson-Nano-Ubuntu-20-image
-in the rest of this tutorial we will work with the 2nd version
 
 You can download this version from:
 https://ln5.sync.com/dl/3a81c82d0/kngeabjw-qtt943v6-mz7kqtpu-xzqcekgy/view/default/11289357380004
+
+In the rest of this tutorial we will work with the first version
 ## Setup the RPi HQ V1.0 camera with the Jetson
 The RPi HQ V1.0 camera it's not supported on the Jetson nano, The CSI interface only works with the Pi Versions 2.1 or later  camera modules.
 
@@ -89,9 +90,10 @@ Detailed instructions on this tutorial:
 https://www.arducam.com/docs/camera-for-jetson-nano/native-jetson-cameras-imx219-imx477/imx477/#5-automatic-driver-installation-the the -only--for-l4t3243-and-later-versions
 
 ### Driver Setup
-After writing the imacommand lineD Card, we must modify the camera interface (CSI) through jetson-io with the bash commandline:
+After writing the image to the SD Card, we must modify the camera interface (CSI) through jetson-io with the command:
 
 sudo /opt/nvidia/jetson-io/jetson-io.py
+
 ### Download automatic installation script
 
 cd ~
@@ -105,13 +107,14 @@ chmod +x install_full.sh
 
 
 ## Configuration of OpenCVpencv version to use Jompy_lib_aruco_poseMarzo_ubuntu/windows.py
-The Jetson nano uses a pre-installed version of OpenCV (4.1), this versiobuiltilded with the pre-installed version of python(3.6), this version of Opencv is not compatible with our library.
+
+The Jetson nano uses a pre-installed version of OpenCV (4.1), this version is built with the pre-installed version of python(3.6), this version of Opencv is not compatible with our library.
 
 Also, we can't create a virtual environment and install the version we want, because, on the jetson nano (Linux in general), the camera requires an object called Gstreamer to be launched, this object can not be installed with the pip or pip3 tool in a virtual environment, so we can only use the pre-installed version of python/Opencv on Linux if we want to use a camera.
 
 The solution is to overwrite the pre-installed version of OpenCV (which is not compatible), and build the new version at first, then install GStreamer for this new version.
 
-This solution works only with the pre-installed version of python (python3.6).
+This solution works only with the pre-installed version of python. (In our case Python3.6)
 
 
 This installation takes between 4h and 5h, the different steps are in the link above:
@@ -119,12 +122,12 @@ This installation takes between 4h and 5h, the different steps are in the link a
 I note that the version installed in this tutorial is not compatible, so we have to change some lines of code to install the versions we want.
 (Opencv and Opencv-contrib V4.5.4 and Gstreamer V1.0 ).
 
-For that, you will find above, a Bash script “build_openc that allows the full installation and configuration of cameraOpenCVpencv. 
+For that, you will find above, a Bash script “build_opencv.sh that allows the full installation and configuration of camera and OpenCV. 
 
-To execute the script, these this two commands:
+To execute the script, you need to use these this two commands:
 cd ~/Downloads
-chmod +x setup.sh 
-bash setup.sh
+chmod +x build_opencv.sh 
+bash build_opencv.sh
 
 ## Using Mavlink protocol to connect the Jetson to the Pixhawk. (MAVSDK)
 
