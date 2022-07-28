@@ -97,7 +97,7 @@ chmod +x install_full.sh
 ./install_full.sh -m imx477
 
 
-### ConfiguratioOpenCVpencv version to use Jompy_lib_aruco_poseMarzo_ubuntu.py
+## Configuration of OpenCVpencv version to use Jompy_lib_aruco_poseMarzo_ubuntu/windows.py
 The Jetson nano uses a pre-installed version of OpenCV (4.1), this versiobuiltilded with the pre-installed version of python(3.6), this version of Opencv is not compatible with our library.
 
 Also, we can't create a virtual environment and install the version we want, because, on the jetson nano (Linux in general), the camera requires an object called Gstreamer to be launched, this object can not be installed with the pip or pip3 tool in a virtual environment, so we can only use the pre-installed version of python/Opencv on Linux if we want to use a camera.
