@@ -26,7 +26,7 @@ To prepare your microSD card, you’ll need a computer wan with an Internet conn
 5. Connect your Micro-USB power supply (or see the Jetson Nano Developer Kit User Guide for details about using DC a power supply with a barrel jack connector). The developer kit will power on and boot automatically.
 ### First boot
 In this,tuto we propose two versions of Jetson nano SDcard image.
-####Version 1
+#### Version 1
 - jetson-nano-jp461-sd-card-image is the version proposed by the Nvidia website, with Ubuntu 18.04 and python 6.9.
 If you use this version, you need to configure the Jetson.
 A green LED next to the Micro-USB connector will light as soon as the developer kit powers on. When you boot the first time, the developer kit will take you through some initial setup, including:
@@ -34,7 +34,7 @@ Review and accept NVIDIA Jetson Software EULA
 Select system language, keyboard layout, and time zone
 Create username, password, and computer name.
 
-####Version 2
+#### Version 2
 
 JetsonNanoUb20 is the version proposed by Qengineering team with Ubuntu 20.04 and python3.8 .
 this version is already configured, after writing the image in the SDcard, the jetson will boot automaticaly.
@@ -72,7 +72,7 @@ to avoid that we will use the command line:
 sudo dpkg --foce-all -i xxx.deb
 After the installation of the package, we must reboot the device
 
-##Automatic Installation:
+## Automatic Installation:
 
 Automatic driver installation is supported only for L4T32.4.3 and later versions
 Our version is: L4R32.7.1, the automatic installation works perfectly on our devices
