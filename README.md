@@ -31,13 +31,14 @@ To prepare your microSD card, you’ll need a computer wan with an Internet conn
 ### First boot
 In this,tuto we propose two versions of Jetson nano SDcard image.
 #### Version 1
-- jetson-nano-jp461-sd-card-image is the version proposed by the Nvidia website, with Ubuntu 18.04 and python 6.9.
+- Jetson Nano 2GB Developer Kit SD Card Image  is the version proposed by the Nvidia website, with Ubuntu 18.04 and python 6.9.
 If you use this version, you need to configure the Jetson.
 A green LED next to the Micro-USB connector will light as soon as the developer kit powers on. When you boot the first time, the developer kit will take you through some initial setup, including:
 Review and accept NVIDIA Jetson Software EULA
 Select system language, keyboard layout, and time zone
 Create username, password, and computer name.
 
+You can download this version from : https://developer.nvidia.com/embedded/downloads
 #### Version 2
 
 JetsonNanoUb20 is the version proposed by Qengineering team with Ubuntu 20.04 and python3.8 .
@@ -46,6 +47,8 @@ The password for this version is : "jetson"
 All instructions are in this link: https://github.com/Qengineering/Jetson-Nano-Ubuntu-20-image
 in the rest of this tutorial we will work with the 2nd version
 
+You can download this version from:
+https://ln5.sync.com/dl/3a81c82d0/kngeabjw-qtt943v6-mz7kqtpu-xzqcekgy/view/default/11289357380004
 ## Setup the RPi HQ V1.0 camera with the Jetson
 The RPi HQ V1.0 camera it's not supported on the Jetson nano, The CSI interface only works with the Pi Versions 2.1 or later  camera modules.
 
