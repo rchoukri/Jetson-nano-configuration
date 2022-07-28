@@ -41,7 +41,7 @@ Create username, password, and computer name.
 You can download this version from : https://developer.nvidia.com/embedded/downloads
 #### Version 2
 
-JetsonNanoUb20 is the version proposed by Qengineering team with Ubuntu 20.04 and python3.8 .
+- JetsonNanoUb20 is the version proposed by Qengineering team with Ubuntu 20.04 and python3.8 .
 this version is already configured, after writing the image in the SDcard, the jetson will boot automaticaly.
 The password for this version is : "jetson"
 All instructions are in this link: https://github.com/Qengineering/Jetson-Nano-Ubuntu-20-image
