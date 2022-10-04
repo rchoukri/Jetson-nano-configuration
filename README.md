@@ -1,4 +1,4 @@
-# Jetson-nano-configuration
+# Jetson-nano_Pixhawk_configuration
 ## Prepare for setup
 The detailed guide  based on the Jetson Nano Developer Kit is on this link :
 
